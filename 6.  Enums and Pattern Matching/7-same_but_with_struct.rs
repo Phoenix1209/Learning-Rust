@@ -6,6 +6,20 @@ struct MoveMessage {
 struct WriteMessage(String); // tuple struct
 struct ChangeColorMessage(i32, i32, i32); // tuple struct
 
+/* struct Message {
+	quit_message: QuitMessage,
+	move_message: MoveMessage,
+	write_message: WriteMessage,
+	change_color_message: ChangeColorMessage
+} */
+
+/* enum Message {
+	quit_message(QuitMessage),
+	move_message(MoveMessage),
+	write_message(WriteMessage),
+	change_color_message(ChangeColorMessage)
+} */
+
 fn main() {}
 
 /*	But if we used the different structs, each of which has its own type,

@@ -1,0 +1,2 @@
+cargo new backyard
+cargo new restaurant --lib

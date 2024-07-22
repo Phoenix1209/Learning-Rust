@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fn main() {
     enum IpAddr {
         V4(u8, u8, u8, u8),
@@ -7,4 +8,15 @@ fn main() {
     let home = IpAddr::V4(127, 0, 0, 1);
 
     let loopback = IpAddr::V6(String::from("::1"));
+=======
+fn main() {
+    enum IpAddr {
+        V4(u8, u8, u8, u8),
+        V6(String),
+    }
+
+    let home = IpAddr::V4(127, 0, 0, 1);
+
+    let loopback = IpAddr::V6(String::from("::1"));
+>>>>>>> 50ab04f68128ae3a1f2ff698801afe071ff2b891
 }

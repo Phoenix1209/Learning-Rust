@@ -56,7 +56,10 @@ mod back_of_house {
 
 /* Don't write use crate::front_of_house::hosting::add_to_waitlist; because
 is unclear where add_to_waitlist is defined */
-use crate::front_of_house::hosting;
+// use crate::front_of_house::hosting;
+
+// You can use pub too
+pub use crate::front_of_house::hosting;
 
 fn deliver_order() {}
 
@@ -64,7 +67,7 @@ pub fn eat_at_restaurant() {
 	// Absolute path
 	crate::front_of_house::hosting::add_to_waitlist();
 
-	// Relative path (doesn't work)
+	// Relative path
 	front_of_house::hosting::add_to_waitlist();
 
 	// Using use

@@ -5,8 +5,8 @@ of the list. */
 fn main() {
     use std::collections::HashMap;
 
-	let mut v = vec![1, 2, 3, 4, 4, 5, 6, 4, 2, 8, 7, 4];
-	// let mut v = vec![];
+	// let mut v = vec![1, 2, 3, 4, 4, 5, 6, 4, 2, 8, 7, 4];
+	let mut v = vec![];
 	println!("Vector: {v:?}");
 
 	v.sort();
@@ -48,10 +48,5 @@ fn get_median(v: &Vec<i32>) -> i32 {
 		}
 	}
 
-	match median {
-		Some(median) => return *median,
-        None => {
-			return *median.unwrap_or(&0)
-		}
-	}
+	return *median.unwrap_or(&0)
 }

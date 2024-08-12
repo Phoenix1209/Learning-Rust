@@ -1,10 +1,10 @@
 #![allow(unused)]
 fn main() {
 	for c in "Зд".chars() {
-		println!("{c}");
+		print!("{c}");
 	}
 
-	println!("");
+	println!("\n");
 
 	for b in "Зд".bytes() {
 		println!("{b}");

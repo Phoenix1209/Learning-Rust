@@ -17,22 +17,20 @@ fn main(){
 	let ch2 = hello.chars().next().unwrap();
 	let ch3 = hello.chars().nth(1).unwrap();
 
-	println!("{hello}");
-	println!("{answer:?}");
-	println!("{asdf:?}");
-	println!("{letter:?}");
-	println!("{chars:?}");
-	println!("{ch}");
-	println!("{ch2}");
-	println!("{ch3}");
-
-	println!();
+	println!("hello: {hello}");
 	print_type(hello);
+	println!("answer: {answer:?}");
 	print_type(answer);
+	println!("asdf: {asdf:?}");
 	print_type(&asdf);
+	println!("letter: {letter:?}");
 	print_type(letter);
+	println!("chars: {chars:?}");
 	print_type(&chars);
+	println!("ch: {ch}");
 	print_type(&ch);
+	println!("ch2: {ch2}");
 	print_type(&ch2);
+	println!("ch3: {ch3}");
 	print_type(&ch3);
 }

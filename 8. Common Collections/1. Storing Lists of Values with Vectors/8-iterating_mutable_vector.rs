@@ -5,6 +5,6 @@ fn main() {
         println!("{i}");
 
         // Error due to borrowing
-        v.push(6);
+        //v.push(6);
     }
 }

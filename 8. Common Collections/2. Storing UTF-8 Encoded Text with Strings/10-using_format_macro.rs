@@ -5,5 +5,8 @@ fn main() {
 
     let s = format!("{s1}-{s2}-{s3}");
 
-    println!("{s}")
+    println!("s: {s}");
+	println!("s1: {s1}");
+	println!("s2: {s2}");
+	println!("s3: {s3}");
 }

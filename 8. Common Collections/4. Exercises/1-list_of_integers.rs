@@ -5,33 +5,40 @@ of the list. */
 fn main() {
     use std::collections::HashMap;
 
-	// let mut v = vec![1, 2, 3, 4, 4, 5, 6, 4, 2, 8, 7, 4];
-	let mut v = vec![];
+	let v = vec![1, 2, 3, 8, 4, 5, 6, 7, 8, 8, 7, 7];
 	println!("Vector: {v:?}");
 
-	v.sort();
-	println!("Sorted vector: {v:?}");
+	let mut v2 = v.clone();
+	v2.sort();
+	println!("Sorted vector: {v2:?}");
 
-	let median = get_median(&v);
-	println!("Median: {median}");
+	let median = get_median(&v2);
+	println!("Median: {median}\n");
 
 	let mut mode = HashMap::new();
-	let mut max = 0;
-	let mut max_key = 0;
-	let mut max_value = 0;
+	let mut max: i32 = v[0];
+	let mut max_key: i32 = v2[0];
+	let mut max_value: i32 = v2[0];
 
-	for number in &v {
+	let mut i: u16 = 1;
+	for number in &v2 {
 		let count = mode.entry(number).or_insert(0);
-		*count += 1;
+        *count += 1;
 
 		if *count > max {
 			max_key = *number;
 			max_value = *count;
 			max = *count;
 		}
+		
+		i += 1;
 
+		println!("number: {number}");
+		println!("HashMap: {mode:?}");
 	}
-	println!("Mode: {max_key} with {max_value} occurrences")
+
+	println!("\nHashMap: {mode:?}");
+	println!("Mode: {max_key} with {max_value} occurrences");
 }
 
 fn get_median(v: &Vec<i32>) -> i32 {

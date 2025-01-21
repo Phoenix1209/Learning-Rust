@@ -8,4 +8,9 @@ fn main() {
 
     let team_name = String::from("Blue");
     let score = scores.get(&team_name).copied().unwrap_or(0);
+
+    println!("{scores:?}");
+
+	println!("\nteam_name: {team_name}");
+	println!("score: {score}")
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="EMPTY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/1. Packages and Crates/my-project/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/2. Defining Modules to Control Scope and Privacy/backyard/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/2. Defining Modules to Control Scope and Privacy/restaurant/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/3. Paths for Referring to an Item in the Module Tree/restaurant/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/generating_random_number/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/generating_random_number_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/restaurant/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/result/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/result_with_as/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/5. Separating Modules into Different Files/restaurant/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/1. Packages and Crates/my-project/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/2. Defining Modules to Control Scope and Privacy/backyard/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/2. Defining Modules to Control Scope and Privacy/restaurant/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/3. Paths for Referring to an Item in the Module Tree/restaurant/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/generating_random_number/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/generating_random_number_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/restaurant/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/result/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/4. Bringing Paths into Scope with the use Keyword/result_with_as/target" />
+      <excludeFolder url="file://$MODULE_DIR$/7. Managing Growing Projects with Packages, Crates, and Modules/5. Separating Modules into Different Files/restaurant/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

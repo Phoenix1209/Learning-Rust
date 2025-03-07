@@ -1,4 +1,4 @@
-// This code won't compile
+// This code won't compile because the variables need to be the same type
 
 struct Point<T> {
     x: T,

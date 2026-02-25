@@ -1,0 +1,13 @@
+// Listing 9-4: Using a match expression to handle the Result variants that might be returned
+
+use std::fs::File;
+
+fn main() {
+	let greeting_file_result = File::open("hello.txt");
+
+	let greeting_file = match greeting_file_result {
+		Ok(file) => file,
+		//Err(error) => panic!("Problem opening the file: {error:?}"),
+		Err(error) => panic!("Problem opening the file: {}", error)
+	};
+}

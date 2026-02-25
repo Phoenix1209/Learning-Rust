@@ -1,0 +1,22 @@
+// Listing 13-18: Passing the return value of env::args to Config::build
+
+// This code will not compile
+
+use std::env;
+use std::process;
+
+use minigrep::Config;
+
+fn main() {
+	let config = Config::build(env::args()).unwrap_or_else(|err| {
+		eprintln!("Problem parsing arguments: {err}");
+		process::exit(1);
+	});
+
+	// --snip--
+
+	if let Err(e) = minigrep::run(config) {
+		eprintln!("Application error: {e}");
+		process::exit(1);
+	}
+}

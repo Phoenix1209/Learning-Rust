@@ -1,0 +1,43 @@
+// Listing 6-7: Checking whether a state existing in 1900 by using conditionals nested inside an if let.
+
+#[derive(Debug)] // so we can inspect the state in a minute
+enum UsState {
+	Alabama,
+	Alaska,
+	// --snip--
+}
+
+impl UsState {
+	fn existed_in(&self, year: u16) -> bool {
+		match self {
+			UsState::Alabama => year >= 1819,
+			UsState::Alaska => year >= 1959,
+			// -- snip --
+		}
+	}
+}
+
+enum Coin {
+	Penny,
+	Nickel,
+	Dime,
+	Quarter(UsState),
+}
+
+fn describe_state_quarter(coin: Coin) -> Option<String> {
+	if let Coin::Quarter(state) = coin {
+		if state.existed_in(1900) {
+			Some(format!("{state:?} is pretty old, for America!"))
+		} else {
+			Some(format!("{state:?} is relatively new."))
+		}
+	} else {
+		None
+	}
+}
+
+fn main() {
+	if let Some(desc) = describe_state_quarter(Coin::Quarter(UsState::Alaska)) {
+		println!("{desc}");
+	}
+}

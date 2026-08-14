@@ -1,0 +1,13 @@
+Generate a new library crate
+
+$ cargo new add_one --lib
+
+To run the binary crate from the add directory, we can specify which package in the workspace we
+want to run by using the -p argument and the package name with cargo run:
+
+$ cargo run -p adder
+
+We can also run tests for one particular crate in a workspace from the top-level directory by using
+the -p flag and specifying the name of the crate we want to test:
+
+$ cargo test -p add_one

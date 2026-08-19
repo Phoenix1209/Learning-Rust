@@ -1,0 +1,2 @@
+pseudocode representation of a cons list
+(1, (2, (3, Nil)))

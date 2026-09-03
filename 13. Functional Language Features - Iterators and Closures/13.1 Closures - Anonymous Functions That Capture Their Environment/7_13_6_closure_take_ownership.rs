@@ -12,4 +12,5 @@ fn main() {
 		.unwrap();
 
 	// println!("Afer defining closure: {list:?}"); // With this it won't compile
+	// The error says that the thread borrowed list but, how does it get it back?
 }

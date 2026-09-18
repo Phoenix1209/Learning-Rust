@@ -1,0 +1,21 @@
+// Listing 17-6: Creating a new task to print one thing while the main task prints something else
+
+extern crate trpl; // required for mdbook test
+
+use std::time::Duration;
+
+fn main() {
+    trpl::block_on(async {
+        trpl::spawn_task(async {
+            for i in 1..10 {
+                println!("hi number {i} from the first task!");
+                trpl::sleep(Duration::from_millis(500)).await;
+            }
+        });
+
+        for i in 1..5 {
+            println!("hi number {i} from the second task!");
+            trpl::sleep(Duration::from_millis(500)).await;
+        }
+    });
+}

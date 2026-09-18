@@ -1,0 +1,15 @@
+// Listing 17-9: Creating an async channel and assigning the two halves to tx and rx
+
+extern crate trpl; // required for mdbook test
+
+fn main() {
+    trpl::block_on(async {
+        let (tx, mut rx) = trpl::channel();
+
+        let val = String::from("hi");
+        tx.send(val).unwrap();
+
+        let received = rx.recv().await.unwrap();
+        println!("received '{received}'");
+    });
+}

@@ -2,6 +2,10 @@
 
 // This code does not compile!
 
+// mpsc stands for multiple producer, single consumer.
+
+// tx = transmitter, rx = receiver
+
 use std::sync::mpsc;
 
 fn main() {

@@ -1,0 +1,23 @@
+// Listing 17-22: Successfully using an iterator as the basis for a stream
+
+extern crate trpl; // required for mdbook test
+
+use trpl::StreamExt;
+
+fn main() {
+    trpl::block_on(async {
+        let values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // --snip--
+        let iter = values.iter().map(|n| n * 2);
+        let mut stream = trpl::stream_from_iter(iter);
+
+        while let Some(value) = stream.next().await {
+            println!("The value was: {value}");
+        }
+    });
+}
+
+/*
+	we can use all of the StreamExt utility methods,
+	just as with iterators.
+*/

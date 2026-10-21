@@ -1,46 +1,75 @@
-// Listing 18-20: A PendingReviewPost that gets created by calling request_review on DraftPost and an approve method that turns a PendingReviewPost into a published Post
-
-pub struct Post {
-    content: String,
-}
-
 pub struct DraftPost {
-    content: String,
-}
-
-impl Post {
-    pub fn new() -> DraftPost {
-        DraftPost {
-            content: String::new(),
-        }
-    }
-
-    pub fn content(&self) -> &str {
-        &self.content
-    }
-}
-
-impl DraftPost {
-    // --snip--
-    pub fn add_text(&mut self, text: &str) {
-        self.content.push_str(text);
-    }
-
-    pub fn request_review(self) -> PendingReviewPost {
-        PendingReviewPost {
-            content: self.content,
-        }
-    }
+	content: String
 }
 
 pub struct PendingReviewPost {
-    content: String,
+	content: String
+}
+
+pub struct ApprovedOncePost {
+	content: String
+}
+
+pub struct Post {
+	content: String
+}
+
+impl DraftPost {
+	pub fn add_text(&mut self, text: &str) {
+		self.content.push_str(text)
+	}
+
+	pub fn request_review(self) -> PendingReviewPost {
+		PendingReviewPost {
+			content: self.content
+		}
+	}
 }
 
 impl PendingReviewPost {
-    pub fn approve(self) -> Post {
-        Post {
-            content: self.content,
-        }
-    }
+	// First approve: isn't a published Post yet.
+	pub fn approve(self) -> ApprovedOncePost {
+		ApprovedOncePost {
+			content: self.content
+		}
+	}
+
+	pub fn reject(self) -> DraftPost {
+		DraftPost {
+			content: self.content
+		}
+	}
+}
+
+impl ApprovedOncePost {
+	// Second approve: now it is published
+	pub fn approve(self) -> Post {
+		Post {
+			content: self.content
+		}
+	}
+
+	pub fn reject(self) -> DraftPost {
+		DraftPost {
+			content: self.content
+		}
+	}
+}
+
+impl Post {
+	pub fn new() -> DraftPost {
+		DraftPost {
+			content: String::new()
+		}
+	}
+
+	pub fn content(&self) -> &str {
+		&self.content
+	}
+
+	// pub fn reject(self) -> PendingReviewPost {
+	// 	PendingReviewPost {
+	// 		content: self.content
+	// 	}
+	// }
 }

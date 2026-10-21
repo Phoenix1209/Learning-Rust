@@ -1,5 +1,7 @@
 // Listing 18-2: Implementations of the public methods add, remove, and average on AveragedCollection
 
+// This code is a library crate
+
 pub struct AveragedCollection {
     list: Vec<i32>,
     average: f64,

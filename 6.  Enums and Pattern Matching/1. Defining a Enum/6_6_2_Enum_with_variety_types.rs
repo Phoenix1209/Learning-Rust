@@ -1,3 +1,5 @@
+// Listing 6-2: A Message enum whose variants each store different amounts and types of values
+
 enum Message {
     Quit,
     Move {x: i32, y: i32},

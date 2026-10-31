@@ -1,3 +1,5 @@
+// Listing 6-1: Storing the data and IpAddrKind variant of an IP address using a struct
+
 fn main() {
     enum IpAddrKind {
         V4,

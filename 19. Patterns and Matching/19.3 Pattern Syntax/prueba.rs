@@ -1,3 +1,5 @@
+// This code does not compile!
+
 fn main() {
     enum Message {
         Hello { id: i32 },
